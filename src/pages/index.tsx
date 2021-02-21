@@ -1,6 +1,7 @@
 import { Flex, Spacer, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { CustomButton } from '../components/CustomButton/CustomButton';
 
 const Index = () => {
   return (
@@ -41,6 +42,9 @@ const Index = () => {
         >
           React.js and GraphQL Enthusiast | Gamer | Developer{' '}
         </Text>
+      </Flex>
+      <Flex wrap='wrap' justify='center' align='center'>
+        <CustomButton text='Contact' variant='solid' />
       </Flex>
     </Flex>
   );
