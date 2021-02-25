@@ -1,21 +1,14 @@
 import { Flex, Spacer, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CustomButton } from '../components/CustomButton/CustomButton';
+import CustomButton from '../components/CustomButton/CustomButton';
+import { Layout } from '../components/CustomButton/Layout';
+
+const navArray = ['works', 'skills', 'blog', 'collections'];
 
 const Index = () => {
   return (
-    <Flex
-      direction='column'
-      justify='center'
-      w='100%'
-      minH='100vh'
-      position='relative'
-      overflowY='auto'
-      maxW='90%'
-      align='center'
-      m='-0 auto'
-    >
+    <Layout>
       <Flex direction='column' m='16px' justify='center' align='center'>
         {/* <Image /> */}
         <Spacer mt='16px' />
@@ -44,9 +37,14 @@ const Index = () => {
         </Text>
       </Flex>
       <Flex wrap='wrap' justify='center' align='center'>
-        <CustomButton text='Contact' variant='solid' />
+        <CustomButton id='about' variant='solid' />
       </Flex>
-    </Flex>
+      <Flex wrap='wrap' justify='center' align='center'>
+        {navArray.map((i) => (
+          <CustomButton id={i} key={i} variant='outline' />
+        ))}
+      </Flex>
+    </Layout>
   );
 };
 
