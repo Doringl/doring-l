@@ -20,7 +20,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
       m='-0 auto'
     >
       <Head>
-        <title>DoringI</title>
+        <title>DoringI | Full Stack Developer</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
       {title ? (

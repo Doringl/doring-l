@@ -3,13 +3,6 @@ import { createBreakpoints } from '@chakra-ui/theme-tools';
 
 const fonts = { body: `Montserrat` };
 
-const breakpoints = createBreakpoints({
-  sm: '40em',
-  md: '52em',
-  lg: '64em',
-  xl: '80em',
-});
-
 const Button = {
   // The styles all button have in common
   baseStyle: {
@@ -62,6 +55,34 @@ const Button = {
   },
 };
 
+const Link = {
+  baseStyle: {
+    textDecoration: 'none',
+  },
+  // Two sizes: sm and md
+  sizes: {
+    sm: {
+      fontSize: '10px',
+    },
+    md: {
+      fontSize: '14px',
+    },
+  },
+  // Two variants: outline and solid
+  variants: {
+    regular: {
+      color: '#999',
+      _hover: { color: '#007BCD', cursor: 'pointer', textDecoration: 'none' },
+    },
+  },
+  // The default size and variant values
+  defaultProps: {
+    size: 'md',
+    variants: 'regular',
+    textDecoration: 'none',
+  },
+};
+
 const theme = extendTheme({
   colors: {
     black: '#16161D',
@@ -69,8 +90,8 @@ const theme = extendTheme({
   fonts,
   components: {
     Button,
+    Link,
   },
-  breakpoints,
   icons: {
     logo: {
       path: (
