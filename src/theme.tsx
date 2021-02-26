@@ -10,11 +10,66 @@ const breakpoints = createBreakpoints({
   xl: '80em',
 });
 
+const Button = {
+  // The styles all button have in common
+  baseStyle: {
+    fontWeight: 'medium',
+  },
+  // Two sizes: sm and md
+  sizes: {
+    sm: {
+      fontSize: '10px',
+      padding: '8px',
+      height: '24px',
+    },
+    md: {
+      fontSize: '14px',
+      px: '12px',
+      height: '28px',
+      minW: '135px',
+      m: '8px',
+    },
+  },
+  // Two variants: outline and solid
+  variants: {
+    outline: {
+      border: '2px solid',
+      borderColor: '#007BCD',
+      color: '#007BCD',
+      _hover: {
+        bg: '#007BCD',
+        color: '#ffffff',
+      },
+    },
+    solid: {
+      border: '2px solid',
+      borderColor: '#007BCD',
+      bg: '#007BCD',
+      color: 'white',
+      _hover: {
+        bg: '#ffffff',
+        color: '#007BCD',
+      },
+    },
+  },
+  // The default size and variant values
+  defaultProps: {
+    size: 'md',
+    variant: 'outline',
+    lineHeight: '1.2',
+    px: '12px',
+    borderRadius: '4px',
+  },
+};
+
 const theme = extendTheme({
   colors: {
     black: '#16161D',
   },
   fonts,
+  components: {
+    Button,
+  },
   breakpoints,
   icons: {
     logo: {

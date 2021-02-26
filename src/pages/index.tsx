@@ -2,7 +2,7 @@ import { Flex, Spacer, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import CustomButton from '../components/CustomButton/CustomButton';
-import { Layout } from '../components/CustomButton/Layout';
+import { Layout } from '../components/Layout/Layout';
 
 const navArray = ['works', 'skills', 'blog', 'collections'];
 
