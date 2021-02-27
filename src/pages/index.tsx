@@ -78,8 +78,8 @@ const Index = () => {
       </Center>
       <Spacer mt='16px' />
       <Flex justify='center' className='animationTwo'>
-        <Link href='/'>
-          <Box as='a' sx={styles}>
+        <Link href='https://github.com/Doringl' passHref={true}>
+          <Box as='a' sx={styles} target='_blank' rel='noopenner noreferrer'>
             <img
               src='/GitHub-Logo.png'
               alt='GitHub Profile'

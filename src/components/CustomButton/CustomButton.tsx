@@ -1,4 +1,4 @@
-import { Box, useStyleConfig } from '@chakra-ui/react';
+import { Button, useStyleConfig } from '@chakra-ui/react';
 import Link from 'next/link';
 import React from 'react';
 
@@ -14,14 +14,13 @@ const CustomButton: React.FC<CustomButtonProps> = ({ id, variant }) => {
   const styles = useStyleConfig('Button', { variant });
   return (
     <Link href={`/${id}`}>
-      <Box
-        as='button'
+      <Button
         transition='all 0.4s cubic-bezier(.08,.52,.52,1)'
         className='animationOne'
         sx={styles}
       >
         {capitalize(id)}
-      </Box>
+      </Button>
     </Link>
   );
 };

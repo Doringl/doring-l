@@ -25,7 +25,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
       </Head>
       {title ? (
         <Text as='h2' p='64px' fontSize='1.5em' fontWeight='semibold'>
-          About
+          {title}
         </Text>
       ) : null}
       <main>{children}</main>

@@ -33,6 +33,9 @@ const Button = {
         bg: '#007BCD',
         color: '#ffffff',
       },
+      _focus: {
+        boxShadow: '0 0 0px 0px rgba(0, 0, 0, .0)',
+      },
     },
     solid: {
       border: '2px solid',
@@ -42,6 +45,9 @@ const Button = {
       _hover: {
         bg: '#ffffff',
         color: '#007BCD',
+      },
+      _focus: {
+        boxShadow: '0 0 0px 0px rgba(0, 0, 0, .0)',
       },
     },
   },
