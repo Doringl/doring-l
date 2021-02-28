@@ -3,12 +3,16 @@ import { Field, ObjectType } from 'type-graphql';
 
 @ObjectType()
 @Entity()
-export class Skill {
+export class Project {
   @Field()
   @PrimaryKey()
   id!: number;
 
   @Field()
   @Property({ type: 'text' })
-  skillName!: string;
+  projectName!: string;
+
+  @Field()
+  @Property({ type: 'text' })
+  projectStatus!: 'Active Development' | 'Maintenance';
 }
