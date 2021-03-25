@@ -6,7 +6,7 @@ interface LayoutProps {
   title?: string;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
+const Layout: React.FC<LayoutProps> = ({ children, title }) => {
   return (
     <Flex
       direction='column'
@@ -32,3 +32,5 @@ export const Layout: React.FC<LayoutProps> = ({ children, title }) => {
     </Flex>
   );
 };
+
+export default Layout;
