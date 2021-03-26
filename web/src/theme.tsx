@@ -22,6 +22,12 @@ const Button = {
       minW: '135px',
       m: '8px',
     },
+    lg: {
+      fontSize: '18px',
+      height: '32px',
+      w: '100%',
+      m: '0px',
+    },
   },
   // Two variants: outline and solid
   variants: {

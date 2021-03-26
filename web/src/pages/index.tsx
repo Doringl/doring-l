@@ -70,7 +70,7 @@ const Index = () => {
       </Flex>
       <Spacer mt='8px' />
       <Center className='animationTwo'>
-        <Link href='contact'>
+        <Link href='/contact'>
           <Box as='a' sx={styles}>
             Contact
           </Box>
