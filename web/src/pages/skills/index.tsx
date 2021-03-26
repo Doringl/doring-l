@@ -3,13 +3,13 @@ import Head from 'next/head';
 import Layout from '../../components/Layout/Layout';
 import Spinner from '../../components/Spinner/Spinner';
 import { Flex } from '@chakra-ui/layout';
-import { useQuery } from '../../generated/graphql';
+import { useGetSkillsQuery } from '../../generated/graphql';
 import { UnorderedList, ListItem } from '@chakra-ui/react';
 
 interface SkillsProps {}
 
 const Skills: React.FC<SkillsProps> = ({}) => {
-  const { loading, error, data } = useQuery();
+  const { loading, error, data } = useGetSkillsQuery();
   console.log(data);
 
   return (

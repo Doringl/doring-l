@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react';
 import Link from 'next/link';
 import CustomButton from '../components/CustomButton/CustomButton';
-import { Layout } from '../components/Layout/Layout';
+import Layout from '../components/Layout/Layout';
 
 const navArray = ['works', 'skills', 'blog', 'collections'];
 
