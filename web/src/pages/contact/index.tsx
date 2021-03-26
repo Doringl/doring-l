@@ -4,6 +4,7 @@ import Layout from '../../components/Layout/Layout';
 import { FormControl } from '@chakra-ui/form-control';
 import { Button, Input, Textarea, useStyleConfig } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
 
 interface IContactData {
   firstName: string;
@@ -15,7 +16,12 @@ const Contact: React.FC = () => {
   const { register, handleSubmit } = useForm<IContactData>();
   const styles = useStyleConfig('Button', { variant: 'outline', size: 'lg' });
   const onSubmit = handleSubmit((data) => {
-    console.log(data);
+    emailjs.send(
+      process.env.REACT_APP_SERVICE_ID,
+      process.env.REACT_APP_TEMPLATE_ID,
+      data,
+      process.env.REACT_APP_USER_ID
+    );
   });
   return (
     <Layout title='Contact'>
