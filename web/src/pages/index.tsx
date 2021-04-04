@@ -56,7 +56,7 @@ const Index = () => {
         align='center'
         className='animationTwo'
       >
-        <CustomButton id='about' variant='solid' />
+        <CustomButton path='about' variant='solid' text='about' />
       </Flex>
       <Flex
         wrap='wrap'
@@ -65,7 +65,7 @@ const Index = () => {
         className='animationTwo'
       >
         {navArray.map((i) => (
-          <CustomButton id={i} key={i} variant='outline' />
+          <CustomButton path={i} key={i} variant='outline' text={i} />
         ))}
       </Flex>
       <Spacer mt='8px' />

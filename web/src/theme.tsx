@@ -56,6 +56,19 @@ const Button = {
         boxShadow: '0 0 0px 0px rgba(0, 0, 0, .0)',
       },
     },
+    outlineBack: {
+      border: '2px solid',
+      borderColor: '#007BCD',
+      color: '#007BCD',
+      ml: '200%',
+      _hover: {
+        bg: '#007BCD',
+        color: '#ffffff',
+      },
+      _focus: {
+        boxShadow: '0 0 0px 0px rgba(0, 0, 0, .0)',
+      },
+    },
   },
   // The default size and variant values
   defaultProps: {

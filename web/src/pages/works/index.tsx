@@ -1,6 +1,6 @@
-import React from 'react';
+import { Flex, ListItem, UnorderedList } from '@chakra-ui/react';
 import Head from 'next/head';
-import { Flex, UnorderedList, ListItem } from '@chakra-ui/react';
+import React from 'react';
 import Layout from '../../components/Layout/Layout';
 import Spinner from '../../components/Spinner/Spinner';
 import { useGetProjectsQuery } from '../../generated/graphql';
@@ -9,7 +9,6 @@ interface WorksProps {}
 
 const Works: React.FC<WorksProps> = ({}) => {
   const { loading, error, data } = useGetProjectsQuery();
-  console.log(data);
   return (
     <Layout title='Works'>
       <Head>

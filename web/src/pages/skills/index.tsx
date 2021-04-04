@@ -5,12 +5,12 @@ import Spinner from '../../components/Spinner/Spinner';
 import { Flex } from '@chakra-ui/layout';
 import { useGetSkillsQuery } from '../../generated/graphql';
 import { UnorderedList, ListItem } from '@chakra-ui/react';
+import CustomButton from '../../components/CustomButton/CustomButton';
 
 interface SkillsProps {}
 
 const Skills: React.FC<SkillsProps> = ({}) => {
   const { loading, error, data } = useGetSkillsQuery();
-  console.log(data);
 
   return (
     <Layout title='Skills'>
@@ -43,6 +43,7 @@ const Skills: React.FC<SkillsProps> = ({}) => {
               ))}
             </UnorderedList>
           </Flex>
+          <CustomButton variant='outlineBack' text='Back' />
         </Flex>
       )}
     </Layout>
