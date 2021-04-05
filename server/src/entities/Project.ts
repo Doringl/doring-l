@@ -14,5 +14,9 @@ export class Project {
 
   @Field()
   @Property({ type: 'text' })
-  projectStatus!: 'Active Development' | 'Maintenance';
+  projectStatus!: 'Active Development' | 'Deployed';
+
+  @Field()
+  @Property({ type: 'text' })
+  projectGitHubLink!: string;
 }

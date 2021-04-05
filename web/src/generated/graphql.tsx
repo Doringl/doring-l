@@ -35,11 +35,13 @@ export type Project = {
   id: Scalars['Float'];
   projectName: Scalars['String'];
   projectStatus: Scalars['String'];
+  projectGitHubLink: Scalars['String'];
 };
 
 export type ProjectInputs = {
   projectName: Scalars['String'];
   projectStatus: Scalars['String'];
+  projectGitHubLink: Scalars['String'];
 };
 
 export type Query = {
@@ -72,7 +74,7 @@ export type GetProjectsQuery = (
   { __typename?: 'Query' }
   & { projects: Array<(
     { __typename?: 'Project' }
-    & Pick<Project, 'id' | 'projectName' | 'projectStatus'>
+    & Pick<Project, 'id' | 'projectName' | 'projectStatus' | 'projectGitHubLink'>
   )> }
 );
 
@@ -118,6 +120,7 @@ export const GetProjectsDocument = gql`
     id
     projectName
     projectStatus
+    projectGitHubLink
   }
 }
     `;

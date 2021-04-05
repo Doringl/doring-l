@@ -1,14 +1,14 @@
-import { myContext } from '../types/types';
 import {
   Arg,
   Ctx,
+  Field,
+  InputType,
   Mutation,
   Query,
   Resolver,
-  InputType,
-  Field,
 } from 'type-graphql';
 import { Project } from '../entities/Project';
+import { myContext } from '../types/types';
 
 @InputType()
 class ProjectInputs {
@@ -16,7 +16,10 @@ class ProjectInputs {
   projectName: string;
 
   @Field()
-  projectStatus: 'Active Development' | 'Maintenance';
+  projectStatus: 'Active Development' | 'Deployed';
+
+  @Field()
+  projectGitHubLink: string;
 }
 
 @Resolver()
@@ -34,6 +37,7 @@ export class ProjectResolver {
     const project = em.create(Project, {
       projectName: inputs.projectName,
       projectStatus: inputs.projectStatus,
+      projectGitHubLink: inputs.projectGitHubLink,
     });
     await em.persistAndFlush(project);
     return project;

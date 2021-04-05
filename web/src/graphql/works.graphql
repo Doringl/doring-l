@@ -3,5 +3,6 @@ query getProjects {
     id
     projectName
     projectStatus
+    projectGitHubLink
   }
 }
